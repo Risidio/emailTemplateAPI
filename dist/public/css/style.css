@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+}
+.email-banner {
+    background-image: url("../images/Australian_Bush.jpg");
+    background-size: cover;
+    height: 60vh;
+}
+.logo-wrapper {
+    background: transparent linear-gradient(180deg, #0000007B 0%, #000000 100%) 0% 0% no-repeat padding-box;
+    height: 60vh;
+}
+.logo {
+    padding-top: 9px;
+}
+.logo h1 {
+    margin: 0;
+    margin-left: 17px;
+    font-family: Montserrat;
+    font-size: 31px;
+    font-weight: 300;
+    line-height: 38px;
+    color: white;
+}
+.logo h2 {
+    margin: 0;
+    margin-left: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    letter-spacing: 2.85px;
+    color: #E76527;
+    text-transform: uppercase;
+}
+.banner-text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 53.74px;
+}
+.banner-text h3 {
+    font-family: Montserrat;
+    font-size: 29px;
+    font-weight: 300;
+    color: white;
+    line-height: 35px;
+    letter-spacing: 0.29px;
+    text-align: center;
+    margin: 0;
+    width: 365px;
+}
+.banner-text p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    line-height: 17px;
+    text-align: center;
+    width: 365px;
+}
+.august-events-section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.august-events-logo-image {
+    margin-top: -65px;
+}
+.august-events-logo-image img {
+    height: 143px;
+    width: 143px;
+}
+.august-events-text-content-primary-heading {
+    font-family: Montserrat;
+    margin: 0;
+    margin-top: 6.52px;
+    font-size: 28px;
+    font-weight: 300;
+    color: black;
+    line-height: 34px;
+    letter-spacing: 0.28px;
+    text-align: center;
+}
+.heading-underline {
+    height: 1px;
+    width: 125px;
+    background-color: #B62B44;
+    margin-top: 10.98px;
+}
+.august-events-list {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.august-event {
+    display: flex;
+    gap: 36px;
+    max-width: 80vw;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+}
+.august-event-time-information {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.august-event-date {
+    font-size: 20px;
+    text-align: left;
+    line-height: 24px;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: black;
+    margin: 0;
+}
+.august-event-date {
+    font-size: 20px;
+    text-align: left;
+    line-height: 24px;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: black;
+    margin: 0;
+    width: 100%;
+}
+.august-event-day-of-the-week {
+    font-size: 12px;
+    text-align: left;
+    line-height: 15px;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: #ED7431;
+    width: 100%;
+    margin: 0;
+}
+.august-event-clock-time {
+    font-size: 12px;
+    text-align: left;
+    line-height: 15px;
+    font-family: Montserrat;
+    font-weight: normal;
+    color: black;
+    margin-top: 10px;
+    width: 100%;
+}
+.august-event-title {
+    font-size: 15px;
+    text-align: left;
+    line-height: 19px;
+    font-family: Montserrat;
+    color: black;
+    font-weight: normal;
+}
+.august-event-description {
+    font-size: 10px;
+    text-align: left;
+    line-height: 13px;
+    font-family: Montserrat;
+    color: black;
+    font-weight: normal;
+}
+.look-forward-to-seeing-you-there-message {
+    margin-top: 23.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.look-forward-to-seeing-you-there-message h2 {
+    font-size: 15px;
+    text-align: center;
+    line-height: 22px;
+    font-family: Montserrat;
+    color: black;
+    font-weight: 300;
+}
+.logo-and-socials {
+    margin-top: 22.02px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.logo-and-socials h2 {
+    margin-top: 28.02px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 13px;
+    letter-spacing: 0.1px;
+    font-family: Montserrat;
+    color: black;
+    font-weight: normal;
+}
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+}
+.email-footer {
+    margin-top: 72.95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-images {
+    max-width: 90vw;
+    display: flex;
+    gap: 30px;
+}
