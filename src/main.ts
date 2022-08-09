@@ -7,6 +7,7 @@ app.use(express.json());
 
 const ejs = require('ejs');
 const cors = require('cors');
+const path = require("path");
 
 app.use(cors())
 
@@ -41,42 +42,9 @@ app.get('/', (req, res) => {
   res.render('email');
 })
 
-app.post("/submit-project", (req,res)=>{
-    const projectMailOptions = {
-      from: process.env.A1, // sender address (who sends)
-      to: process.env.A4, // list of receivers (who receives)
-      subject: `${req.body.name} has sent you a project idea called ${req.body.projectName}!`, // Subject line
-      text: `${req.body.description}`, // plaintext body.contact
-      html: `<div style="margin: 20px; text-align: left; border: solid 1px grey; border-radius: 5px; padding: 20px;">
-              <h3 style="text-align: center;">You recieved a new project idea from your Indige Form </h3>
-              <hr style="margin: 20px; color: grey;"/>
-              <br/>
-              <h3>Name:</h3>
-              <p>${req.body.name}</p>
-              <h3>Email:</h3>
-              <p>${req.body.email}</p>
-              <h3>Project Name:</h3>
-              <p>${req.body.projectName}</p>
-              <h3>Project Description:</h3>
-              <p>${req.body.description}</p>
-            </div>` // html body
-    };
-
-    // send mail with defined transport object
-    transporter.sendMail(projectMailOptions, function(error, info){
-        if(error){
-          console.log(error);
-          res.json({status: 'Request Failed', emailSent: false})
-        } else {
-          console.log('Message sent: ' + info.response);
-          res.json({ status: "Email sent", emailSent: true });
-        }
-    });
-  })
-
   app.post("/contact", (req,res)=>{
     console.log('Hello');
-    ejs.renderFile("C:/Users/User/Dropbox/PC/Desktop/Adam Power/Internship/mail-api-attempt-2/newMailAPI/views/email.ejs", {}, (err, data) => {
+    ejs.renderFile(path.join(__dirname, "views/email.ejs"), {}, (err, data) => {
       console.log('Data: ' + data);
       console.log('Error: ' + err);
       if(err) {
