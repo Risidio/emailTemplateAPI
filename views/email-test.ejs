@@ -4,77 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/email-test.css">
     <title>Test Email</title>
 </head>
 <body>
-    <style>
-        body {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .test-email-form {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .test-email-form h1 {
-            font-size: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .test-email-form input {
-            font-size: 16px;
-            width: 300px;
-            padding: 4px;
-            padding-left: 6px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-        }
-        .test-email-form button {
-            height: 40px;
-            width: 150px;
-            border: none;
-            border-radius: 40px;
-            background-color: cornflowerblue;
-            color: white;
-            font-size: 18px;
-            margin-top: 30px;
-            cursor: pointer;
-        }
-    </style>
     <form class="test-email-form">
         <h1>Enter Email Address Below to receive a test email: </h1>
         <input placeholder="Email Address..." class="email" type="text" name="email" id="email">
         <button type="submit">Submit</button>
     </form>
-    <script>
-        let testEmailForm = document.querySelector('.test-email-form');
-        let emailInput = document.getElementById('email');
-
-        testEmailForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            console.log(123);
-            console.log("Test Data: " + emailInput.value);
-            await fetch(`https://risidio-mail-test-interface.herokuapp.com/test-email`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email: emailInput.value })
-            })
-            .then(res => {
-                return res.json()
-            })
-            .then(resData => {
-                emailInput.value = ''
-                return
-            })
-            .catch(err => {
-                console.log(err);
-            })
-        })
-    </script>
+    <script src="scripts/email-test.js"></script>
 </body>
 </html>
