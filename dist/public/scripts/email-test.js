@@ -5,7 +5,7 @@ let testEmailForm = document.querySelector('.test-email-form');
             e.preventDefault();
             console.log(123);
             console.log("Test Data: " + emailInput.value);
-            await fetch(`http://localhost:4000/test-email`, {
+            await fetch(`http://risidio-mail-test-interface.herokuapp.com/test-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
