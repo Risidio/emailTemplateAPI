@@ -42,7 +42,7 @@ app.get('/view-email-template', (req, res) => {
   res.render('email');
 })
 
-app.get('/test-email-page', (req, res) => {
+app.get('/', (req, res) => {
   res.render('email-test');
 })
 
