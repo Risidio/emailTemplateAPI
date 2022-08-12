@@ -57,7 +57,7 @@
             e.preventDefault();
             console.log(123);
             console.log("Test Data: " + emailInput.value);
-            await fetch('http://localhost:4000/test-email', {
+            await fetch(`${process.env.A5}/test-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
