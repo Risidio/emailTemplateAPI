@@ -38,8 +38,41 @@ transporter.verify((error) => {
         console.log("Ready to Send");
     }
 });
-app.get('/', (req, res) => {
+app.get('/view-email-template', (req, res) => {
     res.render('email');
+});
+app.get('/test-email-page', (req, res) => {
+    res.render('email-test');
+});
+app.post('/test-email', (req, res) => {
+    console.log(123);
+    console.log('Email: ' + req.body.email);
+    ejs.renderFile(path.join(__dirname, "views/email.ejs"), {}, (err, data) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log('No Error');
+            const mailOptions = {
+                from: process.env.A1,
+                to: req.body.email,
+                subject: `Email Newsletter Testing`,
+                text: '',
+                html: data // html body
+            };
+            // send mail with defined transport object
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    // console.log(error);
+                    res.json({ status: 'Request Failed', emailSent: false });
+                }
+                else {
+                    console.log('Message sent: ' + info.response);
+                    res.json({ status: "Email sent", emailSent: true });
+                }
+            });
+        }
+    });
 });
 app.post("/contact", (req, res) => {
     console.log('Hello');
