@@ -57,7 +57,7 @@
             e.preventDefault();
             console.log(123);
             console.log("Test Data: " + emailInput.value);
-            await fetch(`${process.env.A5}/test-email`, {
+            await fetch(`https://risidio-mail-test-interface.herokuapp.com/test-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,6 +70,9 @@
             .then(resData => {
                 emailInput.value = ''
                 return
+            })
+            .catch(err => {
+                console.log(err);
             })
         })
     </script>
