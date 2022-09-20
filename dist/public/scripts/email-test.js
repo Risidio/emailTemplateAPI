@@ -3,6 +3,7 @@ let testEmailForm = document.querySelector('.test-email-form');
 
         testEmailForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            console.log('123');
             await fetch(`https://risidio-mail-test-interface.herokuapp.com/test-email`, {
                 method: 'POST',
                 headers: {
@@ -11,6 +12,7 @@ let testEmailForm = document.querySelector('.test-email-form');
                 body: JSON.stringify({ email: emailInput.value })
             })
             .then(res => {
+                console.log('Email Sent');
                 return res.json()
             })
             .then(resData => {

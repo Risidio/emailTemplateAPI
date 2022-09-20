@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     pool: true,
-    host: "uk53.siteground.eu", // hostname
+    host: "uk77.siteground.eu", // hostname
     secureConnection: false, // TLS requires secureConnection to be false
     port: 465, // port for secure SMTP
     tls: {
@@ -65,7 +65,7 @@ app.post('/test-email', (req, res) => {
       // send mail with defined transport object
       transporter.sendMail(mailOptions, function(error, info){
           if(error){
-            // console.log(error);
+            console.log(error);
             res.json({status: 'Request Failed', emailSent: false})
           } else {
             console.log('Message sent: ' + info.response);
